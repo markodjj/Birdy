@@ -19,10 +19,11 @@ export const Birds = () => {
   useEffect(() => {
     console.log("Updated currLevel:", currLevel);
     if (checkAnwser(text, num) && currLevel === parseInt(num)) {
-      setCurrLevel((prev: number) => prev + 1);
+      // If setCurrLevel expects a number, directly pass the incremented value
+      setCurrLevel(currLevel + 1); // Pass the number directly
       setText("");
     }
-  }, [text, num, setCurrLevel, setText]);
+  }, [text, num, currLevel, setCurrLevel, setText]); // Include currLevel in dependencies
 
   return (
     <ul className={`layer`} style={styleObject}>
