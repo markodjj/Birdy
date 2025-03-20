@@ -2,7 +2,7 @@ import levels from "../data/levels.json";
 
 import { useLevel } from "../context/LevelSelectContext";
 import { useCurrLevel } from "../context/CurrentLevelContext";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight, faCaretLeft } from "@fortawesome/free-solid-svg-icons";

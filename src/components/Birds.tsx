@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { colors } from "../constants/constans.ts";
 import { ImageWraper } from "./ImageWraper.tsx";
 import { useTextInput } from "../context/TextInputContext.tsx";

@@ -1,8 +1,7 @@
 import levels from "../data/levels.json";
 
 import { useLevel } from "../context/LevelSelectContext";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { useEffect } from "react";
+
 import { useCurrLevel } from "../context/CurrentLevelContext";
 
 export const NextButton = () => {
@@ -11,7 +10,7 @@ export const NextButton = () => {
   const numberOfElements = Object.keys(levels).length;
 
   // const [currLevel, setCurrLevel] = useLocalStorage("CurrLevel", 0);
-  const { currLevel, setCurrLevel } = useCurrLevel();
+  const { currLevel } = useCurrLevel();
 
   // useEffect(() => {
   //   "rerender";

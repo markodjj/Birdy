@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { colors } from "../constants/constans.ts";
 // import { content } from "../constants/constans.ts";
 import { ImageWraper } from "./ImageWraper.tsx";

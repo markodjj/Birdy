@@ -1,13 +1,11 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useTextInput } from "../context/TextInputContext";
 import { useLimitRows } from "../hooks/useLimitRows";
-import { useLevel } from "../context/LevelSelectContext";
 
 export const CodeInput = () => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   useLimitRows(textareaRef);
   const { text, setText } = useTextInput();
-  const { num, setNum } = useLevel();
 
   return (
     <textarea

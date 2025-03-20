@@ -1,12 +1,10 @@
-import { useLevel } from "../context/LevelSelectContext";
+// import { useLevel } from "../context/LevelSelectContext";
 import { SelectLevel } from "./SelectLevel";
-import { NextButton } from "./NextButton";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { useEffect } from "react";
+
+// import { useLocalStorage } from "../hooks/useLocalStorage";
 
 export const Selection = () => {
-  const { num, setNum } = useLevel();
-  const [currLevel, setCurrLevel] = useLocalStorage("CurrLevel", 1);
+  // const [currLevel, setCurrLevel] = useLocalStorage("CurrLevel", 1);
   return (
     <div className="">
       <SelectLevel />
