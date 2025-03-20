@@ -19,7 +19,7 @@ export const Birds = () => {
   useEffect(() => {
     console.log("Updated currLevel:", currLevel);
     if (checkAnwser(text, num) && currLevel === parseInt(num)) {
-      setCurrLevel((prev) => prev + 1);
+      setCurrLevel((prev: number) => prev + 1);
       setText("");
     }
   }, [text, num, setCurrLevel, setText]);

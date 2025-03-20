@@ -70,7 +70,7 @@ export const SelectLevel = () => {
         <div className="w-50 -ml-5 mt-4 py-3 items-center flex justify-center bg-[#132743] absolute rounded-sm z-4">
           {levels && (
             <ul className="flex justify-around flex-wrap gap-1 w-40">
-              {Object.entries(levels).map(([key, value], index) => (
+              {Object.entries(levels).map(([key], index) => (
                 <li
                   className="w-8 h-8 bg-[#ffb5b5] flex justify-center items-center rounded-full text-l font-bold hover: hover:border-[#ffff] hover:border-2 hover:text-white! hover:cursor-pointer"
                   key={index}

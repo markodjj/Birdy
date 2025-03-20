@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 import { Instruction } from "./Instruction";
 import levels from "../data/levels.json";
