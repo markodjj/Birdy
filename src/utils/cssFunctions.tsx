@@ -10,7 +10,8 @@ export const parseCSS = (cssString: string) => {
         const camelCaseKey = key.replace(/-([a-z])/g, (_, letter) =>
           letter.toUpperCase()
         ); // Convert kebab-case to camelCase
-        styleObject[camelCaseKey as keyof React.CSSProperties] = value;
+        styleObject[camelCaseKey as keyof React.CSSProperties] = value as any;
+        // styleObject[camelCaseKey as keyof React.CSSProperties] = value;
       }
     }
     return styleObject;
@@ -34,7 +35,7 @@ const allRules: string[] = [
 export const checkFlexProperties = (cssString: string) => {
   const rules = cssString.split(";").filter(Boolean); // Split rules by `;` and filter out empty ones
   for (const rule of rules) {
-    const [key, value] = rule.split(":").map((s) => s.trim());
+    const [key] = rule.split(":").map((s) => s.trim());
     // console.log(key);
     if (allRules.includes(key)) {
       return true;
